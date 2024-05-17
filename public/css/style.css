@@ -49,7 +49,7 @@ body{
 }
 
 /* cards */
-.card{
+.listing-card{
     border: none !important;
     margin-bottom: 2rem;
 }
@@ -100,4 +100,9 @@ body{
     background-color: black !important;
     border: none !important;
     color: white !important;
+}
+
+/* search */
+.search-button{
+    
 }

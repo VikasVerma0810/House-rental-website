@@ -1,15 +1,9 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-    <h1>new listing</h1> <br><br>
-    <form action="/listing" method="post" class="needs-validation" novalidate>
-        <!-- <input type="text" name="listing[title]" placeholder="title"><br>
-            
-        <textarea name="listing[description]" id="" cols="30" rows="10" placeholder="Description"></textarea><br>
-        <input type="text" name="listing[image]" placeholder="image"><br>
-        <input type="number" name="listing[price]" placeholder="price"><br>
-        <input type="text" name="listing[location]" placeholder="location"><br>
-        <input type="text" name="listing[country]" placeholder="country"><br> 
-        <button>add</button>-->
+    
+   <div class="listing-card col-6 offset-3">
+    <h1>New listing</h1> <br><br>
+    <form action="/listing" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
 
         <div>
             <label for="title" class="form-label">Title</label>
@@ -26,9 +20,14 @@
                
         </div>
         <br>
-        <div>
+
+        <!-- <div>
             <label for="image" class="form-label">Image Link</label>
             <input type="text" id="image" name="listing[image]" placeholder="image" class="form-control">
+        </div> -->
+        <div>
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" id="image" name="listing[image]" class="form-control" required>
         </div>
         <br>
         <div>
@@ -52,4 +51,5 @@
         <button class="btn">Create Listing</button>
         
     </form>
+   </div>
 </body>
